@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CSS TASK-2 PART 1</title>
+    <title>CSS TASK-2</title>
 <style>
 .firstlist {
   list-style-type: none;
@@ -39,11 +39,42 @@
   background-color: #e0d9d9;
   color: white;
 }
+.unordlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #e0d9d9;
+  width:400px;
+  outline: 1px solid black;
+  outline-offset: 15px;
+  display: inline-block;
+  margin-left:30px;
+}
+
+.l {
+  float: left;
+  border-right:1px solid blue;
+  background-color: #e0d9d9;
+}
 
 
+.l a {
+  display: block;
+  color:blue;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
+.l a:hover:not(.current) {
+  background-color: yellow;
+}
 
-
+.current {
+  background-color: #525050;
+  color:white;
+}
 </style>
 
 <body>
@@ -57,7 +88,16 @@
   <li class="list"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
   <li class="list"><a href="https://getbootstrap.com/">Bootstrap</a></li>
 </ul>
-
+<div class="d">
+<h2 class="h">Horizontal Navigation Bar </h2>
+<ul class="unordlist" >
+ 
+    <li class="l" style="color:white;" ><a class="current"  style="color:white;" href="#home">Home</a></li>
+    <li class="l"><a href="https://www.java.com/">Java</a></li>
+    <li class="l"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+    <li class="l" ><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+  </ul>
+</div>
 
 </body>
 </head>

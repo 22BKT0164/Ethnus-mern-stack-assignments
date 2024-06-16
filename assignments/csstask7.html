@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+        body {
+            background-color: rgb(165, 42, 71);
+        }
+        label {
+            margin-bottom: 5px;
+            margin-left: 3px;
+            display: inline-block;
+        }
+        input, select, textarea {
+            padding: 5px;
+            margin-left: 15px;
+            position: absolute;
+            left: 600px;
+            margin-bottom: 30px;
+            width: 300px;
+        }
+        select{
+            width:200px;
+        }
+        button {
+            padding: 10px;
+            width: 34vw;
+            margin-top: 15px;
+            margin: auto;
+            position: relative;
+            left: 48px;
+            top:29px;
+        }
+        .main {
+            width: 40vw;
+            margin: auto;
+            background-color: #7F2446;
+            margin-top: 140px;
+            padding: 20px;
+            height:450px;
+        }
+        .gender1 {
+            position: relative;
+            left: 85px;
+            right: 10px;
+            top: -13px;
+        }
+        .gender2 {
+            position: relative;
+            left: 192px;
+            right: 10px;
+            top: -59px;
+        }
+        .gender3 {
+            position: relative;
+            left: 299px;
+            right: 10px;
+            top: -106px;
+        }
+        .l {
+            position: relative;
+            left: -253px;
+            right: -37px;
+        }
+        .circle {
+            position: relative;
+            left: -26px;
+        }
+        .name {
+            position: relative;
+            left: 85px;
+        }
+        .lab1 {
+            position: relative;
+            top: 10px;
+        }
+        .part {
+            position: relative;
+            top: 10px;
+        }
+        .language-group {
+            margin-top: -123px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="div1 form-group">
+            <label for="name">Name:</label>
+            <input class="name" type="text" id="name" name="name" placeholder="your name">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="your email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-group gender-group">
+            <label class="lab1">Gender:</label>
+            <div class="gender1">
+                <input class="circle" type="radio" id="male" name="gender" value="male">
+                <label class="l" for="male">Male:</label>
+            </div>
+            <div class="gender2">
+                <input class="circle" type="radio" id="female" name="gender" value="female">
+                <label class="l" for="female">Female:</label>
+            </div>
+            <div class="gender3">
+                <input class="circle" type="radio" id="other" name="gender" value="other">
+                <label class="l" for="other">Other:</label>
+            </div>
+        </div>
+        <div class="form-group language-group">
+            <label for="language">Language:</label>
+            <select id="language" name="language">
+                <option value="-1">Select language</option>
+                <option value="english">English</option>
+                <option value="spanish">Spanish</option>
+                <option value="french">French</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="zipcode">Zip Code:</label>
+            <input type="text" id="zipcode" name="zipcode">
+        </div>
+        <div class="form-group">
+            <label for="about">About:</label>
+            <textarea id="about" name="about" rows="3" cols="22">Write about yourself...</textarea>
+        </div>
+        <button type="submit">Register</button>
+    </div>
+</body>
+</html>
