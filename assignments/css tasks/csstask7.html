@@ -6,6 +6,7 @@
         .form-group {
             margin-bottom: 15px;
             margin-top: 10px;
+            
         }
         body {
             background-color: rgb(165, 42, 71);
@@ -14,6 +15,7 @@
             margin-bottom: 5px;
             margin-left: 3px;
             display: inline-block;
+            color:white;
         }
         input, select, textarea {
             padding: 5px;
@@ -41,7 +43,7 @@
             background-color: #7F2446;
             margin-top: 140px;
             padding: 20px;
-            height:450px;
+            height:460px;
         }
         .gender1 {
             position: relative;
@@ -85,17 +87,37 @@
         .language-group {
             margin-top: -123px; 
         }
+        .email1{
+            position: relative;
+  top: 8px;
+  left: 4px;
+        }
+        .email2{
+            position: relative;
+  top: 10px;
+  left: 88px;
+        }
+        .one{
+            position: relative;
+  top: 10px;
+  left: 86px;
+        }
+        .two{
+            position: relative;
+  top: 13px;
+  left: 4px;
+        }
     </style>
 </head>
 <body>
     <div class="main">
         <div class="div1 form-group">
-            <label for="name">Name:</label>
-            <input class="name" type="text" id="name" name="name" placeholder="your name">
+            <label class="name two" for="name">Name:</label>
+            <input class="name one" type="text" id="name" name="name" placeholder="your name">
         </div>
         <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="your email">
+            <label class="email1" for="email">Email:</label>
+            <input class="email2" type="email" id="email" name="email" placeholder="your email">
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
