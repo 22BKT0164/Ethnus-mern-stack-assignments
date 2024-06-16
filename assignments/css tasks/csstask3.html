@@ -1,88 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS TASK-3</title>
-<style>
-  
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td, #customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even){background-color: #f2f2f2;}
-
-#customers tr:hover {background-color: #ddd;}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #04AA6D;
-  color: white;
-}
-</style>
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #04AA6D;
+            color: white;
+        }
+        /* Responsive design */
+        @media screen and (max-width: 600px) {
+            #customers thead {
+                display: none;
+            }
+            #customers, #customers tbody, #customers tr, #customers td {
+                display: block;
+                width: 100%;
+            }
+            #customers tr {
+                margin-bottom: 15px;
+            }
+            #customers td {
+                text-align: right;
+                padding-left: 50%;
+                position: relative;
+            }
+            #customers td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 50%;
+                padding-left: 15px;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+    </style>
 </head>
 <body>
-
-
-
-<table id="customers">
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Berglunds snabbköp</td>
-    <td>Christina Berglund</td>
-    <td>Sweden</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>Königlich Essen</td>
-    <td>Philip Cramer</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Laughing Bacchus Winecellars</td>
-    <td>Yoshi Tannamuri</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
- 
-  
-</table>
-
+    <table id="customers">
+        <thead>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Company">Alfreds Futterkiste</td>
+                <td data-label="Contact">Maria Anders</td>
+                <td data-label="Country">Germany</td>
+            </tr>
+            <tr>
+                <td data-label="Company">Berglunds snabbköp</td>
+                <td data-label="Contact">Christina Berglund</td>
+                <td data-label="Country">Sweden</td>
+            </tr>
+            <tr>
+                <td data-label="Company">Centro comercial Moctezuma</td>
+                <td data-label="Contact">Francisco Chang</td>
+                <td data-label="Country">Mexico</td>
+            </tr>
+            <tr>
+                <td data-label="Company">Ernst Handel</td>
+                <td data-label="Contact">Roland Mendel</td>
+                <td data-label="Country">Austria</td>
+            </tr>
+            <tr>
+                <td data-label="Company">Island Trading</td>
+                <td data-label="Contact">Helen Bennett</td>
+                <td data-label="Country">UK</td>
+            </tr>
+            <tr>
+                <td data-label="Company">Königlich Essen</td>
+                <td data-label="Contact">Philip Cramer</td>
+                <td data-label="Country">Germany</td>
+            </tr>
+            <tr>
+                <td data-label="Company">Laughing Bacchus Winecellars</td>
+                <td data-label="Contact">Yoshi Tannamuri</td>
+                <td data-label="Country">Canada</td>
+            </tr>
+            <tr>
+                <td data-label="Company">Magazzini Alimentari Riuniti</td>
+                <td data-label="Contact">Giovanni Rovelli</td>
+                <td data-label="Country">Italy</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
-
-

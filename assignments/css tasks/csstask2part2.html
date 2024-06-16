@@ -1,72 +1,74 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS TASK-2 PART 2</title>
-<style>
+    <style>
+        .unordlist {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #e0d9d9;
+            width: 400px;
+            outline: 1px solid black;
+            outline-offset: 15px;
+            display: inline-block;
+            margin-left: 30px;
+        }
+        .l {
+            float: left;
+            border-right: 1px solid blue;
+            background-color: #e0d9d9;
+        }
+        .l:last-child {
+            border-right: none;
+        }
+        .l a {
+            display: block;
+            color: blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .l a:hover:not(.current) {
+            background-color: yellow;
+        }
+        .current {
+            background-color: #525050;
+            color: white;
+        }
+        .h {
+            margin-left: 12px;
+        }
 
-
-
-.unordlist {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #e0d9d9;
-  width:400px;
-  outline: 1px solid black;
-  outline-offset: 15px;
-  display: inline-block;
-  margin-left:30px;
-}
-
-.l {
-  float: left;
-  border-right:1px solid blue;
-  background-color: #e0d9d9;
-}
-
-
-.l a {
-  display: block;
-  color:blue;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.l a:hover:not(.current) {
-  background-color: yellow;
-}
-
-.current {
-  background-color: #525050;
-  color:white;
-}
-.h{
-    margin-left:12px;
-}
-</style>
-
-<body>
-
-
-
-
-<h2 class="h">Horizontal Navigation Bar </h2>
-<ul class="unordlist" >
- 
-    <li class="l" style="color:white;" ><a class="current"  style="color:white;" href="#home">Home</a></li>
-    <li class="l"><a href="https://www.java.com/">Java</a></li>
-    <li class="l"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
-    <li class="l" ><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
-  </ul>
-</div>
-
-</body>
+   
+        @media (max-width: 600px) {
+            .unordlist {
+                width: 100%;
+                margin-left: 0;
+            }
+            .l {
+                float: none;
+                border-right: none;
+                border-bottom: 1px solid blue;
+                width: 100%;
+            }
+            .l a {
+                text-align: left;
+                padding: 14px;
+            }
+        }
+    </style>
 </head>
+<body>
+    <h2 class="h">Horizontal Navigation Bar</h2>
+    <ul class="unordlist">
+        <li class="l"><a class="current" href="#home">Home</a></li>
+        <li class="l"><a href="https://www.java.com/">Java</a></li>
+        <li class="l"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+        <li class="l"><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+    </ul>
+</body>
 </html>
-
-
-
-
-

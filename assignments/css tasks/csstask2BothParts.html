@@ -1,109 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS TASK-2</title>
-<style>
-.firstlist {
-  list-style-type: none;
-  margin: 15px;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
- display: inline-block;
-  outline: 1px solid black;
-  outline-offset: 15px;
-}
-.h{
-    margin-top:10px;
-    text-align: center;
-}
-.d{
-    margin-left:150px;
-    display: inline-block; 
-}
-.list a {
-  display: block;
- 
-  padding: 8px 16px;
-  text-decoration: none;
-  background-color:rgb(0, 191, 255);
-  color:blue;
-}
-
-.list a.active {
-  background-color:rgb(255, 149, 0);
-  color: white;
-}
-
-.list a:hover:not(.active) {
-  background-color: #e0d9d9;
-  color: white;
-}
-.unordlist {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #e0d9d9;
-  width:400px;
-  outline: 1px solid black;
-  outline-offset: 15px;
-  display: inline-block;
-  margin-left:30px;
-}
-
-.l {
-  float: left;
-  border-right:1px solid blue;
-  background-color: #e0d9d9;
-}
-
-
-.l a {
-  display: block;
-  color:blue;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.l a:hover:not(.current) {
-  background-color: yellow;
-}
-
-.current {
-  background-color: #525050;
-  color:white;
-}
-</style>
-
+    <style>
+        .firstlist {
+            list-style-type: none;
+            margin: 15px;
+            padding: 0;
+            width: 200px;
+            background-color: #f1f1f1;
+            display: inline-block;
+            outline: 1px solid black;
+            outline-offset: 15px;
+        }
+        .h {
+            margin-top: 10px;
+            text-align: center;
+        }
+        .d {
+            margin-left: 150px;
+            display: inline-block;
+        }
+        .list a {
+            display: block;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: rgb(0, 191, 255);
+            color: blue;
+        }
+        .list a.active {
+            background-color: rgb(255, 149, 0);
+            color: white;
+        }
+        .list a:hover:not(.active) {
+            background-color: #e0d9d9;
+            color: white;
+        }
+        .unordlist {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #e0d9d9;
+            width: 400px;
+            outline: 1px solid black;
+            outline-offset: 15px;
+            display: inline-block;
+            margin-left: 30px;
+        }
+        .l {
+            float: left;
+            border-right: 1px solid blue;
+            background-color: #e0d9d9;
+        }
+        .l a {
+            display: block;
+            color: blue;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .l a:hover:not(.current) {
+            background-color: yellow;
+        }
+        .current {
+            background-color: #525050;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            .firstlist, .unordlist {
+                width: 100%;
+                display: block;
+            }
+            .d {
+                margin-left: 0;
+            }
+            .l {
+                float: none;
+                border-right: none;
+                border-bottom: 1px solid blue;
+            }
+            .l:last-child {
+                border-bottom: none;
+            }
+            .unordlist {
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
 <body>
 
 <h2>Vertical Navigation Bar</h2>
 
 <ul class="firstlist">
-  <li class="list"><a class="active" href="#home">Home</a></li>
-  <li class="list"><a href="https://www.java.com/">Java</a></li>
-  <li class="list"><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
-  <li class="list"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
-  <li class="list"><a href="https://getbootstrap.com/">Bootstrap</a></li>
+    <li class="list"><a class="active" href="#home">Home</a></li>
+    <li class="list"><a href="https://www.java.com/">Java</a></li>
+    <li class="list"><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+    <li class="list"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+    <li class="list"><a href="https://getbootstrap.com/">Bootstrap</a></li>
 </ul>
+
 <div class="d">
-<h2 class="h">Horizontal Navigation Bar </h2>
-<ul class="unordlist" >
- 
-    <li class="l" style="color:white;" ><a class="current"  style="color:white;" href="#home">Home</a></li>
-    <li class="l"><a href="https://www.java.com/">Java</a></li>
-    <li class="l"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
-    <li class="l" ><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
-  </ul>
+    <h2 class="h">Horizontal Navigation Bar </h2>
+    <ul class="unordlist">
+        <li class="l"><a class="current" href="#home">Home</a></li>
+        <li class="l"><a href="https://www.java.com/">Java</a></li>
+        <li class="l"><a href="https://en.wikipedia.org/wiki/HTML">HTML</a></li>
+        <li class="l"><a href="https://en.wikipedia.org/wiki/CSS">CSS</a></li>
+    </ul>
 </div>
 
 </body>
-</head>
 </html>
-
-
-
-
-
